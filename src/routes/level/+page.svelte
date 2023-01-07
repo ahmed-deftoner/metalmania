@@ -18,8 +18,8 @@
     <h5>what is the name of this band?</h5>
     <ul>
         {#each bands as band}
-          <li class="option">
-            <a href="/">{band}</a>
+          <li>
+            <a href="/level">{band}</a>
           </li>
        {/each}
     </ul>
@@ -41,20 +41,18 @@
         padding-left: 2.5rem;
     }
 
-    .option {
-        background-color: darkblue;
-        border-radius: 20px;
-        padding-left: 1.5rem;
-        margin-top: 1.5rem;
-        font-weight: 600;
-        font-size: 2.5rem;
-    }
 
     ul {
         list-style: none;
     }
 
     a {
+        background-color: darkblue;
+        border-radius: 20px;
+        padding-left: 1.5rem;
+        margin-top: 1.5rem;
+        font-weight: 600;
+        font-size: 2.5rem;
         color: whitesmoke;
         text-decoration: none;
     }

@@ -25,9 +25,7 @@
 		{#each levels as level}
 			<div class="card">
 				<h3 class="level">Level {level}</h3>
-				<div class="play">
-					<a href="/level">Play</a>
-				</div>
+				<a href="/level">Play</a>
 			</div>
 		{/each}
 	</div>
@@ -87,7 +85,7 @@
 		margin-bottom: 1.5rem;
 	}
 
-	.play {
+	a {
 		background-color: darkmagenta;
 		border-radius: 10px;
 		border-color: white;
@@ -97,6 +95,5 @@
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
 		color: azure;
-		z-index: 10;
 	}
 </style>
