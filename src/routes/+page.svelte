@@ -2,11 +2,13 @@
 	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+
+	const levels = ["1","2","3","4","5"];
 </script>
 
 <svelte:head>
 	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<meta name="description" content="Metalmania" />
 </svelte:head>
 
 <section>
@@ -18,14 +20,17 @@
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app
+		<strong>Metalmania</strong>
 	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
+	<div class="card-section">
+		{#each levels as level}
+			<div class="card">
+				<h3 class="level">Level {level}</h3>
+				<button class="play">Play</button>
+			</div>
+		{/each}
+	</div>
+	
 </section>
 
 <style>
@@ -55,5 +60,41 @@
 		height: 100%;
 		top: 0;
 		display: block;
+	}
+
+	.card-section {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+
+	.card {
+		margin-left: 4.5rem;
+		margin-top: 1rem;
+		background-color: slateblue;
+		padding: 2.5rem;
+		justify-content: center;
+		border-radius: 10px;
+		box-shadow: 4px 5px 26px -2px rgba(0,0,0,0.62);
+	}
+
+	.level {
+		color: azure;
+		font-weight: 600;
+		font-size: large;
+		margin-left: 10px;
+		margin-bottom: 1.5rem;
+	}
+
+	.play {
+		background-color: darkmagenta;
+		border-radius: 10px;
+		border-color: white;
+		text-decoration: solid;
+		font-weight: 300;
+		font-size: medium;
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+		color: azure;
 	}
 </style>
