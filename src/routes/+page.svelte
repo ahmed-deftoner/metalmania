@@ -1,5 +1,4 @@
 <script>
-	import Counter from './Counter.svelte';
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
 
@@ -26,7 +25,9 @@
 		{#each levels as level}
 			<div class="card">
 				<h3 class="level">Level {level}</h3>
-				<button class="play">Play</button>
+				<div class="play">
+					<a href="/level">Play</a>
+				</div>
 			</div>
 		{/each}
 	</div>
@@ -96,5 +97,6 @@
 		padding-left: 1.5rem;
 		padding-right: 1.5rem;
 		color: azure;
+		z-index: 10;
 	}
 </style>
