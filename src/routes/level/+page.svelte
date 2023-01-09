@@ -1,8 +1,11 @@
-<script>
+<script lang="ts">
     import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import l1 from '$lib/images/l1/1.jpg';
+    import type { PageData } from './$types';
 
-    const bands = ["Linkin Park", "BMTH", "Paramore", "Korn"];
+    export let data: PageData;
+
 </script>
 
 <svelte:head>
@@ -12,14 +15,14 @@
 
 <div class="level">
     <picture>
-        <source srcset={welcome} type="image/webp" />
+        <source srcset={l1} type="image/jpg" />
         <img src={welcome_fallback} alt="Welcome" />
     </picture>
     <h5>what is the name of this band?</h5>
     <ul>
-        {#each bands as band}
+        {#each data.arr[0].options as band}
           <li>
-            <a href="/level">{band}</a>
+            <button>{band}</button>
           </li>
        {/each}
     </ul>
@@ -46,7 +49,7 @@
         list-style: none;
     }
 
-    a {
+    button {
         background-color: darkblue;
         border-radius: 20px;
         padding-left: 1.5rem;
