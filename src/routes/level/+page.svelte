@@ -1,10 +1,17 @@
 <script lang="ts">
-    import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
-	import l1 from '$lib/images/l1/1.jpg';
     import type { PageData } from './$types';
 
     export let data: PageData;
+    let current: string[] = Array.prototype.fill("", 0, 4);
+
+    function checkoption(el: string, idx: number) {
+        if (el === data.arr[0].right) {
+            current[idx] = "correct";
+        } else {
+            current[idx] = "incorrect";
+        }
+    }
 
 </script>
 
@@ -20,9 +27,11 @@
     </picture>
     <h5>what is the name of this band?</h5>
     <ul>
-        {#each data.arr[0].options as band}
+        {#each data.arr[0].options as band, idx}
           <li>
-            <button>{band}</button>
+            <button class="{current[idx]}" on:click={() => checkoption(band, idx)}>
+                {band}
+            </button>
           </li>
        {/each}
     </ul>
@@ -58,5 +67,13 @@
         font-size: 2.5rem;
         color: whitesmoke;
         text-decoration: none;
+    }
+
+    .correct {
+        background-color: green;
+    }
+
+    .incorrect {
+        background-color: red;
     }
 </style>
