@@ -15,7 +15,7 @@
 
 <div class="level">
     <picture>
-        <source srcset={l1} type="image/jpg" />
+        <source srcset={data.arr[0].img} type="image/jpg" />
         <img src={welcome_fallback} alt="Welcome" />
     </picture>
     <h5>what is the name of this band?</h5>
