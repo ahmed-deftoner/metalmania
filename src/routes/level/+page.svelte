@@ -1,15 +1,27 @@
 <script lang="ts">
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
     import type { PageData } from './$types';
 
     export let data: PageData;
+    let idx: number = 0;
     let current: string[] = Array.prototype.fill("", 0, 4);
+    let completed: boolean = false;
+    let score: number = 0;
 
-    function checkoption(el: string, idx: number) {
-        if (el === data.arr[0].right) {
-            current[idx] = "correct";
+    const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+    async function checkoption(el: string, i: number) {
+        if (el === data.arr[idx].right) {
+            current[i] = "correct";
+            score++;
         } else {
-            current[idx] = "incorrect";
+            current[i] = "incorrect";
+        }
+        await sleep(1000);
+        current[i] = "";
+        idx++;
+        if (idx == 5) {
+            completed = true;
+            score = (score / idx) * 100;
         }
     }
 
@@ -21,29 +33,23 @@
 </svelte:head>
 
 <div class="level">
-    <picture>
-        <source srcset={data.arr[0].img} type="image/jpg" />
-        <img src={welcome_fallback} alt="Welcome" />
-    </picture>
-    <h5>what is the name of this band?</h5>
-    <ul>
-        {#each data.arr[0].options as band, idx}
-          <li>
-            <button class="{current[idx]}" on:click={() => checkoption(band, idx)}>
+    {#if completed === true}
+        <h1>Level Complete</h1>
+        <h4>You got {score}% right</h4>
+    {:else}
+        <picture>
+            <source srcset={data.arr[idx]?.img} type="image/jpg" />
+        </picture>
+        <h3>{data.arr[idx].question}</h3>
+        {#each data.arr[idx].options as band, index}
+            <button class="{current[index]}" on:click={() => checkoption(band, index)}>
                 {band}
             </button>
-          </li>
-       {/each}
-    </ul>
+        {/each}
+    {/if}
 </div>
 
 <style>
-    img {
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
 
     .level {
         display: flex;
@@ -67,6 +73,7 @@
         font-size: 2.5rem;
         color: whitesmoke;
         text-decoration: none;
+        cursor: pointer;
     }
 
     .correct {

@@ -1,7 +1,7 @@
 import type { PageServerLoad } from "./$types";
 import l1 from '$lib/images/l1/1.jpg';
 import l2 from '$lib/images/l1/2.jpg';
-import l3 from '$lib/images/l1/3.jpg';
+import l3 from '$lib/images/l1/3.webp';
 
 
 type Question = {
