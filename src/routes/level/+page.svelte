@@ -37,9 +37,9 @@
         <h1>Level Complete</h1>
         <h4>You got {score}% right</h4>
     {:else}
-        <picture>
-            <source srcset={data.arr[idx]?.img} type="image/jpg" />
-        </picture>
+        {#if data.arr[idx]?.img}
+            <img src={data.arr[idx].img} alt="option" />
+        {/if}
         <h3>{data.arr[idx].question}</h3>
         {#each data.arr[idx].options as band, index}
             <button class="{current[index]}" on:click={() => checkoption(band, index)}>
@@ -59,9 +59,11 @@
         padding-left: 2.5rem;
     }
 
-
-    ul {
-        list-style: none;
+    img {
+        align-self: center;
+        justify-content: center;
+        height: 50%;
+        width: 50%;
     }
 
     button {
