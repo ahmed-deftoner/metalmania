@@ -6,10 +6,12 @@
     let current: string[] = Array.prototype.fill("", 0, 4);
     let completed: boolean = false;
     let score: number = 0;
+    let pressed: boolean = false;
 
     const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
     async function checkoption(el: string, i: number) {
+        pressed = true;
         if (el === data.arr[idx].right) {
             current[i] = "correct";
             score++;
@@ -17,12 +19,13 @@
             current[i] = "incorrect";
         }
         await sleep(1000);
-        current[i] = "";
         idx++;
         if (idx == 5) {
             completed = true;
             score = (score / idx) * 100;
         }
+        current[i] = "";
+        pressed = false;
     }
 
 </script>
@@ -42,7 +45,7 @@
         {/if}
         <h3>{data.arr[idx].question}</h3>
         {#each data.arr[idx].options as band, index}
-            <button class="{current[index]}" on:click={() => checkoption(band, index)}>
+            <button class="{current[index]} {pressed === true ? "disabled": ""}" on:click={() => checkoption(band, index)}>
                 {band}
             </button>
         {/each}
@@ -76,6 +79,11 @@
         color: whitesmoke;
         text-decoration: none;
         cursor: pointer;
+    }
+
+    .disabled {
+        cursor: not-allowed;
+        pointer-events: none;
     }
 
     .correct {
