@@ -1,10 +1,11 @@
 <script lang="ts">
     import type { PageData } from './$types';
+    import { completed } from '../../Store';
 
     export let data: PageData;
     let idx: number = 0;
     let current: string[] = Array.prototype.fill("", 0, 4);
-    let completed: boolean = false;
+    let complete: boolean = false;
     let score: number = 0;
     let pressed: boolean = false;
 
@@ -21,7 +22,8 @@
         await sleep(1000);
         idx++;
         if (idx == 5) {
-            completed = true;
+            complete = true;
+            $completed[0] = true;
             score = (score / idx) * 100;
         }
         current[i] = "";
@@ -36,9 +38,10 @@
 </svelte:head>
 
 <div class="level">
-    {#if completed === true}
+    {#if complete === true}
         <h1>Level Complete</h1>
         <h4>You got {score}% right</h4>
+        <a href="/">Go to Home</a>
     {:else}
         {#if data.arr[idx]?.img}
             <img src={data.arr[idx].img} alt="option" />
