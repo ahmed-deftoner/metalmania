@@ -1,8 +1,9 @@
 <script>
 	import welcome from '$lib/images/svelte-welcome.webp';
 	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import { completed } from '../Store';
 
-	const levels = ["1","2","3","4","5"];
+	const levels = [1, 2, 3, 4, 5];
 </script>
 
 <svelte:head>
@@ -24,6 +25,9 @@
 	<div class="card-section">
 		{#each levels as level}
 			<div class="card">
+				{#if $completed[level - 1] === true}
+					<h5>Completed</h5>
+				{/if}
 				<h3 class="level">Level {level}</h3>
 				<a href="/level">Play</a>
 			</div>
