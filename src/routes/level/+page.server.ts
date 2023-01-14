@@ -8,12 +8,13 @@ type Question = {
     img?: string
 }
 
-export const load = (async ({ fetch, params }) => {
+export const load = (async () => {
 
-    const response = await fetch('/api/level/?level=1', {
+    const response = await fetch('http://localhost:5173/api/level/?level=1', {
         method: 'GET',
         headers: {
-          'content-type': 'application/json'
+          'content-type': 'application/json',
+          'accept-type': 'application/json'
         }
       });
 
