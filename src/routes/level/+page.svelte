@@ -24,6 +24,7 @@
         if (idx == 5) {
             complete = true;
             $completed[0] = true;
+            console.log($completed);
             score = (score / idx) * 100;
         }
         current[i] = "";

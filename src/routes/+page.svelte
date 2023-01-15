@@ -29,7 +29,7 @@
 					<h5>Completed</h5>
 				{/if}
 				<h3 class="level">Level {level}</h3>
-				<a href="/level">Play</a>
+				<a on:click={() => console.log($completed)} href="/level">Play</a>
 			</div>
 		{/each}
 	</div>
