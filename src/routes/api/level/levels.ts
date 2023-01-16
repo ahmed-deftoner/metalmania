@@ -83,30 +83,30 @@ export function level3() {
     return new Array<Question>(
         {
             question: "Name this band?",
-            options: ["Linkin Park","Skillet","Five Finger Death Punch","Dead By Sunrise"],
-            right: "Linkin Park",
+            options: ["Boston Manor","Gleemer","Citizen","Badflower"],
+            right: "Boston Manor",
             img: l1
         },
         {
-            question: "Which band wrote the songs \"Change( in the house of flies)\" and \"My Own Summer (Shove It)\"?",
-            options: ["Nine Inch Nails","Slipknot","Korn","Deftones"],
-            right: "Deftones"
+            question: "Which band wrote the songs \"Holly Roller\" and \"Circle with me\"?",
+            options: ["Currents","Jinjer","Sleep Token","Spiritbox"],
+            right: "Spiritbox"
         },
         {
             question: "Name this band?",
-            options: ["My Chemical Romance","Paramore","Panic! At the Disco","Fall Out Boy"],
-            right: "Paramore",
+            options: ["Napalm Death","Cannibal Corpse","Nile","Corpus"],
+            right: "Cannibal Corpse",
             img: l2
         },
         {
-            question: "What genre was pioneered by bands like Slipknot and Korn in the early 2000's?",
-            options: ["Black Metal","Nu Metal","Alternative Metal","Death Metal"],
-            right: "Nu Metal"
+            question: "Which band here does not play Djent?",
+            options: ["Opeth","Invent Animate","Animals As Leaders","Periphery"],
+            right: "Opeth"
         },
         {
             question: "Name this band?",
-            options: ["Rage Against The Machine","Nirvana","Foo Fighters","Prophets Of Rage"],
-            right: "Nirvana",
+            options: ["Stand Atlantic","Dream State","Parting Gift","Bilmuri"],
+            right: "Parting Gift",
             img: l3
         },
     );
