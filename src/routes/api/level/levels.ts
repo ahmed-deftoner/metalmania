@@ -1,6 +1,15 @@
-import l1 from '$lib/images/l1/1.jpg';
-import l2 from '$lib/images/l1/2.jpg';
-import l3 from '$lib/images/l1/3.webp';
+//level 1
+import l1 from '$lib/images/l1/11.jpg';
+import l2 from '$lib/images/l1/12.jpg';
+import l3 from '$lib/images/l1/13.webp';
+
+//level 2
+import a1 from "$lib/images/l2/21.jpg";
+import a2 from "$lib/images/l2/22.jpg";
+import a3 from "$lib/images/l2/23.webp";
+
+//level 3
+
 
 
 export type Question = {
@@ -51,7 +60,7 @@ export function level2() {
             question: "Name this band?",
             options: ["Asking Alexandria","Architects","Sylosis","Breaking Benjamin"],
             right: "Architects",
-            img: l1
+            img: a1
         },
         {
             question: "Which band are known for their albums \"Sempiternal\" and \"Suicide Season\"?",
@@ -62,7 +71,7 @@ export function level2() {
             question: "Name this band?",
             options: ["Gorgoroth","Celtic Frost","Behemoth","Mayhem"],
             right: "Behemoth",
-            img: l2
+            img: a2
         },
         {
             question: "What genre was pioneered by bands like Meshuggah and Parkway Drive in the mid 2000's?",
@@ -73,7 +82,7 @@ export function level2() {
             question: "Name this singer?",
             options: ["Sam Carter","Oli Sykes","Tom Middleton","Austin Carlile"],
             right: "Oli Sykes",
-            img: l3
+            img: a3
         },
     );
 }
