@@ -20,9 +20,9 @@ import c3 from "$lib/images/l4/3.jpg";
 
 
 //level 3
-import d1 from "$lib/images/l5/1.jpg";
+import d1 from "$lib/images/l5/1.webp";
 import d2 from "$lib/images/l5/2.jpg";
-import d3 from "$lib/images/l5/3.jpg";
+import d3 from "$lib/images/l5/3.webp";
 
 export type Question = {
     question: string,
@@ -174,7 +174,7 @@ export function level5() {
             question: "Name this band?",
             options: ["Dillinger Escape Plan","Tool","Limp Bizkit","Alice in Chains"],
             right: "Tool",
-            img: l1
+            img: d1
         },
         {
             question: "Which band wrote the songs \"Stockholm Syndrome\" and \"Knights Of Cydonia\"?",
@@ -185,7 +185,7 @@ export function level5() {
             question: "Name this band?",
             options: ["Loathe","Polyphia","Bad Omens","Movements"],
             right: "Polyphia",
-            img: l2
+            img: d2
         },
         {
             question: "Which band here is punk?",
@@ -196,7 +196,7 @@ export function level5() {
             question: "Name this band?",
             options: ["The Story So Far","Wonder Years","Trash Boat","Holding Absence"],
             right: "Trash Boat",
-            img: l3
+            img: d3
         },
     );
 }
