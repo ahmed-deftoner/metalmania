@@ -117,30 +117,30 @@ export function level4() {
     return new Array<Question>(
         {
             question: "Name this band?",
-            options: ["Linkin Park","Skillet","Five Finger Death Punch","Dead By Sunrise"],
-            right: "Linkin Park",
+            options: ["Thornhill","Alpha Wolf","Crystal Lake","Polaris"],
+            right: "Crystal Lake",
             img: l1
         },
         {
-            question: "Which band wrote the songs \"Change( in the house of flies)\" and \"My Own Summer (Shove It)\"?",
-            options: ["Nine Inch Nails","Slipknot","Korn","Deftones"],
-            right: "Deftones"
+            question: "Which band wrote the songs \"Dead Inside\" and \"Wounds\"?",
+            options: ["Eskimo Callboy","Whitechapel","Broadside","Future Palace"],
+            right: "Future Palace"
         },
         {
             question: "Name this band?",
-            options: ["My Chemical Romance","Paramore","Panic! At the Disco","Fall Out Boy"],
-            right: "Paramore",
+            options: ["Dayseeker","The Devil Wears Prada","Sleeping With Sirens","Pierce The Veil"],
+            right: "Dayseeker",
             img: l2
         },
         {
-            question: "What genre was pioneered by bands like Slipknot and Korn in the early 2000's?",
-            options: ["Black Metal","Nu Metal","Alternative Metal","Death Metal"],
-            right: "Nu Metal"
+            question: "What genre was Nine Inch Nails famous for?",
+            options: ["Death Metal","Doom Metal","Industrial Metal","Thrash Metal"],
+            right: "Industrial Metal"
         },
         {
-            question: "Name this band?",
-            options: ["Rage Against The Machine","Nirvana","Foo Fighters","Prophets Of Rage"],
-            right: "Nirvana",
+            question: "Name this guitarist?",
+            options: ["Lee Malia","Tom Middleton","Misha Mansoor","Tom Morello"],
+            right: "Misha Mansoor",
             img: l3
         },
     );
