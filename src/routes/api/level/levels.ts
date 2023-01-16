@@ -9,7 +9,9 @@ import a2 from "$lib/images/l2/22.jpg";
 import a3 from "$lib/images/l2/23.webp";
 
 //level 3
-
+import b1 from "$lib/images/l3/1.jpg";
+import b2 from "$lib/images/l3/2.jpg";
+import b3 from "$lib/images/l3/3.jpg";
 
 
 export type Question = {
@@ -94,7 +96,7 @@ export function level3() {
             question: "Name this band?",
             options: ["Boston Manor","Gleemer","Citizen","Badflower"],
             right: "Boston Manor",
-            img: l1
+            img: b1
         },
         {
             question: "Which band wrote the songs \"Holly Roller\" and \"Circle with me\"?",
@@ -105,7 +107,7 @@ export function level3() {
             question: "Name this band?",
             options: ["Napalm Death","Cannibal Corpse","Nile","Corpus"],
             right: "Cannibal Corpse",
-            img: l2
+            img: b2
         },
         {
             question: "Which band here does not play Djent?",
@@ -115,8 +117,8 @@ export function level3() {
         {
             question: "Name this band?",
             options: ["Stand Atlantic","Dream State","Parting Gift","Bilmuri"],
-            right: "Parting Gift",
-            img: l3
+            right: "Dream State",
+            img: b3
         },
     );
 }
