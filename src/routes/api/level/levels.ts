@@ -151,30 +151,30 @@ export function level5() {
     return new Array<Question>(
         {
             question: "Name this band?",
-            options: ["Linkin Park","Skillet","Five Finger Death Punch","Dead By Sunrise"],
-            right: "Linkin Park",
+            options: ["Dillinger Escape Plan","Tool","Limp Bizkit","Alice in Chains"],
+            right: "Tool",
             img: l1
         },
         {
-            question: "Which band wrote the songs \"Change( in the house of flies)\" and \"My Own Summer (Shove It)\"?",
-            options: ["Nine Inch Nails","Slipknot","Korn","Deftones"],
-            right: "Deftones"
+            question: "Which band wrote the songs \"Stockholm Syndrome\" and \"Knights Of Cydonia\"?",
+            options: ["Escape The Fate","Green Day","Muse","Caskets"],
+            right: "Muse"
         },
         {
             question: "Name this band?",
-            options: ["My Chemical Romance","Paramore","Panic! At the Disco","Fall Out Boy"],
-            right: "Paramore",
+            options: ["Loathe","Polyphia","Bad Omens","Movements"],
+            right: "Polyphia",
             img: l2
         },
         {
-            question: "What genre was pioneered by bands like Slipknot and Korn in the early 2000's?",
-            options: ["Black Metal","Nu Metal","Alternative Metal","Death Metal"],
-            right: "Nu Metal"
+            question: "Which band here is punk?",
+            options: ["Glass Tides","Yours Truly","You Me At Six","Belmont"],
+            right: "Belmont"
         },
         {
             question: "Name this band?",
-            options: ["Rage Against The Machine","Nirvana","Foo Fighters","Prophets Of Rage"],
-            right: "Nirvana",
+            options: ["The Story So Far","Wonder Years","Trash Boat","Holding Absence"],
+            right: "Trash Boat",
             img: l3
         },
     );
