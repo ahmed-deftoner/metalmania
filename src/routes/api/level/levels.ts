@@ -1,4 +1,3 @@
-
 import l1 from '$lib/images/l1/1.jpg';
 import l2 from '$lib/images/l1/2.jpg';
 import l3 from '$lib/images/l1/3.webp';
@@ -50,30 +49,30 @@ export function level2() {
     return new Array<Question>(
         {
             question: "Name this band?",
-            options: ["Linkin Park","Skillet","Five Finger Death Punch","Dead By Sunrise"],
-            right: "Linkin Park",
+            options: ["Asking Alexandria","Architects","Sylosis","Breaking Benjamin"],
+            right: "Architects",
             img: l1
         },
         {
-            question: "Which band wrote the songs \"Change( in the house of flies)\" and \"My Own Summer (Shove It)\"?",
-            options: ["Nine Inch Nails","Slipknot","Korn","Deftones"],
-            right: "Deftones"
+            question: "Which band are known for their albums \"Sempiternal\" and \"Suicide Season\"?",
+            options: ["Bring Me The Horizon","Chelsea Smile","Suicide Silence","While She Sleeps"],
+            right: "Bring Me The Horizon"
         },
         {
             question: "Name this band?",
-            options: ["My Chemical Romance","Paramore","Panic! At the Disco","Fall Out Boy"],
-            right: "Paramore",
+            options: ["Gorgoroth","Celtic Frost","Behemoth","Mayhem"],
+            right: "Behemoth",
             img: l2
         },
         {
-            question: "What genre was pioneered by bands like Slipknot and Korn in the early 2000's?",
-            options: ["Black Metal","Nu Metal","Alternative Metal","Death Metal"],
-            right: "Nu Metal"
+            question: "What genre was pioneered by bands like Meshuggah and Parkway Drive in the mid 2000's?",
+            options: ["Grindcore","Progressive Metal","Deathcore","Metalcore"],
+            right: "Metalcore"
         },
         {
-            question: "Name this band?",
-            options: ["Rage Against The Machine","Nirvana","Foo Fighters","Prophets Of Rage"],
-            right: "Nirvana",
+            question: "Name this singer?",
+            options: ["Sam Carter","Oli Sykes","Tom Middleton","Austin Carlile"],
+            right: "Oli Sykes",
             img: l3
         },
     );
