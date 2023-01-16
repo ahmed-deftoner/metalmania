@@ -1,4 +1,4 @@
-import type { PageServerLoad } from "./$types";
+import type { PageServerLoad } from "../$types";
 
 
 type Question = {
@@ -8,9 +8,9 @@ type Question = {
     img?: string
 }
 
-export const load = (async ({url}) => {
+export const load = (async ({url, params}) => {
 
-    const response = await fetch(url.origin + '/api/level/?level=1', {
+    const response = await fetch(url.origin + '/api/level/?level=' + params.slug, {
         method: 'GET',
         headers: {
           'content-type': 'application/json',

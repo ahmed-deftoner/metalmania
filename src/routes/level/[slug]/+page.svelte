@@ -1,6 +1,6 @@
 <script lang="ts">
-    import type { PageData } from './$types';
-    import { completed } from '../../Store';
+    import type { PageData } from '../$types';
+    import { completed } from '../../../Store';
 
     export let data: PageData;
     let idx: number = 0;
