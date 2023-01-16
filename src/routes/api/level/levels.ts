@@ -13,6 +13,16 @@ import b1 from "$lib/images/l3/1.jpg";
 import b2 from "$lib/images/l3/2.jpg";
 import b3 from "$lib/images/l3/3.jpg";
 
+//level 3
+import c1 from "$lib/images/l4/1.jpg";
+import c2 from "$lib/images/l4/2.webp";
+import c3 from "$lib/images/l4/3.jpg";
+
+
+//level 3
+import d1 from "$lib/images/l5/1.jpg";
+import d2 from "$lib/images/l5/2.jpg";
+import d3 from "$lib/images/l5/3.jpg";
 
 export type Question = {
     question: string,
@@ -130,7 +140,7 @@ export function level4() {
             question: "Name this band?",
             options: ["Thornhill","Alpha Wolf","Crystal Lake","Polaris"],
             right: "Crystal Lake",
-            img: l1
+            img: c1
         },
         {
             question: "Which band wrote the songs \"Dead Inside\" and \"Wounds\"?",
@@ -141,7 +151,7 @@ export function level4() {
             question: "Name this band?",
             options: ["Dayseeker","The Devil Wears Prada","Sleeping With Sirens","Pierce The Veil"],
             right: "Dayseeker",
-            img: l2
+            img: c2
         },
         {
             question: "What genre was Nine Inch Nails famous for?",
@@ -152,7 +162,7 @@ export function level4() {
             question: "Name this guitarist?",
             options: ["Lee Malia","Tom Middleton","Misha Mansoor","Tom Morello"],
             right: "Misha Mansoor",
-            img: l3
+            img: c3
         },
     );
 }
